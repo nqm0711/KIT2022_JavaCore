@@ -4,4 +4,5 @@ Do Ngoc Chung,Ha Noi,1998,9.2
 Nguyen Van Hai,Ha Noi,1998,9.1
 Tran Thu Tra,Ha Noi,1999,9.0
 Dao Dinh Luyen,Ha Noi,1996,10.0
-La Gia Huy,Ha Noi,2001, 9.9
+La Gia Huy,Ha Noi,2001,9.9
+Nguyen Hai Long,Ha Noi,1995,9.0
