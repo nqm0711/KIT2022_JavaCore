@@ -11,7 +11,7 @@ public class Student implements Serializable {
     public Student() {
     }
 
-    public Student(String hoten, String quequan, int namsinh, float diemTB) {
+    public Student(String hoTen, String queQuan, int namSinh, float diemTB) {
         this.hoTen = hoTen;
         this.queQuan = queQuan;
         this.namSinh = namSinh;
@@ -22,7 +22,7 @@ public class Student implements Serializable {
         return hoTen;
     }
 
-    public void setHoTen(String hoten) {
+    public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
     }
 
@@ -30,7 +30,7 @@ public class Student implements Serializable {
         return queQuan;
     }
 
-    public void setQueQuan(String quequan) {
+    public void setQueQuan(String queQuan) {
         this.queQuan = queQuan;
     }
 
