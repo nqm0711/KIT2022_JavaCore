@@ -7,7 +7,7 @@ public class ObjectOutputStream {
 
 
     static void SapXepChenTheoNamSinh(Student[] A) {
-        int namSinh = 0;
+        int namSinh;
         Student studentTemp1,studentTemp2;
         for (int i = 1; i < A.length; i++) {
             studentTemp1 = A[i];
@@ -22,7 +22,7 @@ public class ObjectOutputStream {
     }
     public static void main(String[] args) throws IOException {
         String outputFile = "FileStudents.dat";
-        java.io.ObjectOutputStream objectOutput = null;
+        java.io.ObjectOutputStream objectOutput;
         FileReader fr = new FileReader("StudentInput.txt");
         BufferedReader br = new BufferedReader(fr);
         int length = 0;
