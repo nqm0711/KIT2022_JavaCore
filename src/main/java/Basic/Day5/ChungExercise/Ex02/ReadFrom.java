@@ -21,21 +21,21 @@ public class ReadFrom {
             // System.out.println(integersInString[i]);
 
             // }
-            String hoten = integersInString[0];
-            studenA.setHoten(hoten);
+            String hoTen = integersInString[0];
+            studenA.setHoTen(hoTen);
 
-            String quequan = integersInString[1];
-            studenA.setQuequan(quequan);
+            String queQuan = integersInString[1];
+            studenA.setQueQuan(queQuan);
 
-            int namsinh = Integer.parseInt(integersInString[2]);
-            studenA.setNamsinh(namsinh);
+            int namSinh = Integer.parseInt(integersInString[2]);
+            studenA.setNamSinh(namSinh);
 
             float diemTB = Float.parseFloat(integersInString[3]);
             studenA.setDiemTB(diemTB);
 
-            System.out.println("Ten : " + studenA.getHoten());
-            System.out.println("Que Quan : " + studenA.getQuequan());
-            System.out.println("NamSinh : " + studenA.getNamsinh());
+            System.out.println("Ten : " + studenA.getHoTen());
+            System.out.println("Que Quan : " + studenA.getQueQuan());
+            System.out.println("NamSinh : " + studenA.getNamSinh());
             System.out.println("Diem : " + studenA.getDiemTB());
             objectOutput.writeObject(studenA);
             br.close();
