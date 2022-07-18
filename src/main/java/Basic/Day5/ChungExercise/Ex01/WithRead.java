@@ -1,4 +1,4 @@
-package BTVN05.Ex01;
+package Basic.Day5.ChungExercise.Ex01;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -14,8 +14,8 @@ public class WithRead {
         BufferedReader br = null;
 
         try {
-            br = new BufferedReader(new FileReader("BTVN05\\Ex01\\file-content.txt"));
-            DataOutputStream out = new DataOutputStream(new FileOutputStream("BTVN05\\Ex01\\Numbers.dat"));
+            br = new BufferedReader(new FileReader("src/main/java/Basic/Day5/ChungExercise/Ex01/file-content.txt"));
+            DataOutputStream out = new DataOutputStream(new FileOutputStream("Numbers.dat"));
 
             String[] integersInString = br.readLine().split(" ");
             int a[] = new int[integersInString.length];

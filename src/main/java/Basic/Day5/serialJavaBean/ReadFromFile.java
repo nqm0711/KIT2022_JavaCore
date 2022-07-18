@@ -1,11 +1,11 @@
 
 package Basic.Day5.serialJavaBean;
- 
+
 import java.text.*;
 import java.io.*;
 public class ReadFromFile {
-    public static void main(String[] args) {     
-        String inputFile = "D:\\testObjectFile.txt";
+    public static void main(String[] args) {
+        String inputFile = "testObjectFile.txt";
         DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
         try {
                 ObjectInputStream objectInput
@@ -26,5 +26,5 @@ public class ReadFromFile {
             ex.printStackTrace();
         }
     }
- 
+
 }

@@ -1,4 +1,4 @@
-package BTVN05.Ex02;
+package Basic.Day5.ChungExercise.Ex02;
 
 import java.io.EOFException;
 import java.io.FileInputStream;

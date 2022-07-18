@@ -1,4 +1,4 @@
-package BTVN05.Ex01;
+package Basic.Day5.ChungExercise.Ex01;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -11,7 +11,7 @@ public class WithReadNumber {
         BufferedReader br = null;
 
         try {
-            br = new BufferedReader(new FileReader("BTVN05\\Ex01\\Numbers.dat"));
+//            br = new BufferedReader(new FileReader(""));
             // DataOutputStream out = new DataOutputStream(new
             // FileOutputStream("BTVN05\\Ex01\\Numbers.txt"));
 
