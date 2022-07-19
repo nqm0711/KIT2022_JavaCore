@@ -1,0 +1,11 @@
+HashMap<Supplier, TreeMap<Purchase, ArrayList<PurchaseDetail>>> hmSup = new HashMap<>();
+
+        //
+        for (Supplier s:hmSup.keySet() ){
+            TreeMap<Purchase, ArrayList<PurchaseDetail>> tm;
+            tm=hmSup.get(s);
+            for (Purchase p:tm.keySet()) {{
+                ArrayList<PurchaseDetail> lst;
+                lst = tm.get(p);
+            }
+        }
