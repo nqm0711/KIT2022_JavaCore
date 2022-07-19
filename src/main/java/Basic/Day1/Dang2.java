@@ -45,13 +45,13 @@ public class Dang2 {
         int count3=0;
         int lastIndex3=0;
         int [] B3 = new int[1];
-        for (int i=1;i<A3.length;i++) {
-            if (A3[i-1]%2==0&&A3[i]%2==0) count3++;
+        for (int i=0;i<A3.length;i++) {
+            if (A3[i]%2==0) count3++;
             else  count3=0;
             if (count3>max3) { max3=count3; lastIndex3=i;}
         }
         System.out.println("3.1: Số phần tử của dãy có các số chẵn liên tiếp dài nhất là "+max3);
         System.out.print("3.2: Dãy đó là");
-        for (int i = lastIndex3-max3; i<lastIndex3+1; i++) {System.out.print(" "+A3[i]);}
+        for (int i = lastIndex3+1-max3; i<lastIndex3+1; i++) {System.out.print(" "+A3[i]);}
     }
 }

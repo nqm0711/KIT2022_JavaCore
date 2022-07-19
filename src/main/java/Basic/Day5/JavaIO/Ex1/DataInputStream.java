@@ -6,7 +6,7 @@ public class DataInputStream {
     public static void main(String[] args) {
         String input = "";
         String [] inputArray;
-        int[] numberArray = new int[0];
+        int[] numberArray;// = new int[0];
         try {
             java.io.DataInputStream in = new java.io.DataInputStream(new FileInputStream("Numbers.dat"));
             while (in.available()>0) {
@@ -28,17 +28,18 @@ public class DataInputStream {
         int max=0;
         int count=0;
         int lastIndex=0;
-        for (int i=1;i<A.length;i++) {
-            if (A[i-1]%2==0&&A[i]%2==0) count++;
+        for (int i=0;i<A.length;i++) {
+            if (A[i]%2==0) count++;
             else  count=0;
             if (count>max) { max=count; lastIndex=i;}
         }
         System.out.print("Dãy chẵn dài nhất là: ");
-        for (int i = lastIndex-max; i<lastIndex+1; i++) {System.out.print(" "+A[i]);}
+        for (int i = lastIndex+1-max; i<lastIndex+1; i++) {System.out.print(" "+A[i]);}
     }
 
     static void addIntToArray(int [] A,int a) {
-            A = Arrays.copyOf(A,A.length+1);
-            A[A.length-1] = a;
+        A = Arrays.copyOf(A,A.length+1);
+        A[A.length-1] = a;
     }
 }
+
