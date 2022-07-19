@@ -18,6 +18,7 @@ public class DataInputStream {
                 numberArray[i] = Integer.parseInt(inputArray[i]);
             }
             inDayChanDaiNhat(numberArray);
+            in.close();
         }catch (Exception e) {
             e.printStackTrace();
         }
@@ -25,19 +26,19 @@ public class DataInputStream {
 
     static void inDayChanDaiNhat(int []A){
         int max=0;
-        int count=1;
+        int count=0;
         int lastIndex=0;
         for (int i=1;i<A.length;i++) {
             if (A[i-1]%2==0&&A[i]%2==0) count++;
-            else  count=1;
+            else  count=0;
             if (count>max) { max=count; lastIndex=i;}
         }
         System.out.print("Dãy chẵn dài nhất là: ");
-        for (int i = lastIndex+1-max; i<lastIndex+1; i++) {System.out.print(" "+A[i]);}
+        for (int i = lastIndex-max; i<lastIndex+1; i++) {System.out.print(" "+A[i]);}
     }
 
     static void addIntToArray(int [] A,int a) {
-            A = new int[A.length + 1];
+            A = Arrays.copyOf(A,A.length+1);
             A[A.length-1] = a;
     }
 }

@@ -18,6 +18,7 @@ public class DataOutputStream {
                 out.writeInt(i);
             }
             br.close();
+            out.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
