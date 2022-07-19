@@ -56,7 +56,42 @@ public class ObjectOutputStream {
             br.close();
             fr.close();
 
-        } catch (IOException e) {
+        }
+//        try {
+//            objectOutput = new java.io.ObjectOutputStream(new FileOutputStream(outputFile));
+//            Student student;
+//        int length = 0,i=0;
+
+//            for (String line = br.readLine(); line != null; line = br.readLine()) length++;
+//            Student[] StudentsArray = new Student[length];
+
+//            for (String line = br.readLine(); line != null; line = br.readLine()) {
+//                String[] studentStringArray = line.split(",");
+//                student = new Student();
+//
+//                String hoTen = studentStringArray[0];
+//                student.setHoTen(hoTen);
+//
+//                String queQuan = studentStringArray[1];
+//                student.setQueQuan(queQuan);
+//
+//                int namSinh = Integer.parseInt(studentStringArray[2].trim());
+//                student.setNamSinh(namSinh);
+//
+//                float diemTB = Float.parseFloat(studentStringArray[3]);
+//                student.setDiemTB(diemTB);
+//                StudentsArray[i-1]= student;
+//                i++;
+//            }
+//            SapXepChenTheoNamSinh(StudentsArray);
+//            for (Student i:StudentsArray){
+//                objectOutput.writeObject(i);
+//            }
+//            br.close();
+//            fr.close();
+//
+//        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
