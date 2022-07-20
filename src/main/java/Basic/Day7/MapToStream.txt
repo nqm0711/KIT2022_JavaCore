@@ -1,0 +1,4 @@
+// Cấu trúc Map đổ ra Stream
+  Map<Customer, TreeMap<Order, ArrayList<OrderDetail>>> hm = new HashMap<>();
+
+  hm.entrySet().stream()
