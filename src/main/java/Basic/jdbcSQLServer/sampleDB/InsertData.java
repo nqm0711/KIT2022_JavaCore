@@ -3,21 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jdbcSQLServer.sampleDB;
+package Basic.jdbcSQLServer.sampleDB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- *
- * @author Hung
- */
 public class InsertData {
 
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://Localhost:1433;"
+        String connectionUrl = "jdbc:sqlserver://DESKTOP-4JK9APK\\SQLEXPRESS;"
                 + "databaseName=sampleDB;user=sa;password=sa";
         // Declare the JDBC objects.     
         Connection conn = null;
