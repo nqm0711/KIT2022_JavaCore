@@ -1,0 +1,69 @@
+2. Bài 2 – Áp dụng các cấu trúc collections
+A) Xây dựng các lớp liên quan đến hóa đơn bán hàng sau:
+a.1. Tạo lớp Order gồm các thuộc tính sau - HOÁ ĐƠN
+  - int  IdOrder;// mã hoá đơn
+  - Date OrdDate;// ngày hoá đơn
+  - String CustomerID; // mã khách hàng
+Ví dụ:
+or1 = new Order (1,"06/8/2020", "Cus01");
+or2 = new Order (2,"06/8/2020", "Cus02");
+a.2. Tạo lớp OrderDetail gồm các thuộc tính sau - CHI TIẾT HOÁ ĐƠN
+    - int  IdOrder; // mã hoá đơn
+    - int IdDetail;// mã hoá đơn chi tiết
+    - int ItemID;// mã hàng
+    - int Amount;// số lượng hàng
+    - float Price; //đơn giá
+Ví dụ:
+// Chi tiết của Order có id=1
+orDetail1 = new OrderDetail  (1, 1, 1, 10, 100);
+orDetail2 = new  OrderDetail (1, 2, 5, 7, 20);
+// Chi tiết của Order có id=2
+orDetail3 = new OrderDetail (2, 3, 3, 10, 100);
+orDetail4 = new OrderDetail (2, 4, 7, 7, 20);
+
+a.3. Tạo lớp Purchase gồm các thuộc tính sau - NHẬP HÀNG
+  - int IdPurchase;// mã đơn nhập hàng
+  - Date purDate;// ngày nhập hàng
+  - String SupplierID ;// mã nhà cung cấp
+
+a.4. Tạo lớp PurchaseDetail gồm các thuộc tính sau
+    - int IdPurchase;
+    - int IdDetail;
+    - int ItemID;// mã mặt hàng
+    - int  Amount;
+    - float Price;
+
+a.5.Tạo lớp Supplier  gồm các thuộc tính sau
+  - String IdSup;/ mã nhà cung cấp
+  - String Name;
+  - String  Address;
+  - String  Tel;
+
+a.6. Tạo lớp Customer gồm:
+  - String IdCus;/ mã khách hàng
+  - String Name;
+  - String  Address;
+  - String  Tel;
+B) Yêu cầu:
+b.1. Bài 2.1 Hãy xây dựng và chèn các hoá đơn vào các cấu trúc dữ liệu sau:
+1. TreeMap <Order, ArrayList<OrderDetail>>
+- Tạo ít 02 Order cho mỗi khác hàng
+- Thực hành tìm kiếm chi tiết hoá đơn theo mã hoá đơn
+- Tìm hóa đơn có tổng số lượng lớn nhất
+- Xác định hóa đơn có tổng tiền lớn nhất và in giá lớn nhất ra màn hình.
+
+2. TreeMap <Customer, ArrayList<Order> >
+- Tạo ít nhất là 02 khách hàng
+- Thực hành tìm kiếm danh sách hoá đơn theo mã khách hàng
+- Xác định khách hàng có nhiều hóa đơn nhất và in ra màn hình: Khách hàng và Số lượng hóa đơn tương ứng.
+
+b.2. Bài 2.2 Hãy xây dựng và chèn đơn nhập hàng vào các cấu trúc dữ liệu sau:
+ HashMap < Customer, TreeMap <Order, ArrayList<OrderDetail>>  >
+- Tạo ít nhất 02 khách hàng, mỗi khách hàng ít nhất 02 Order, mỗi Order ít nhất là 02 OrderDetail
+- Thực hành tìm kiếm các hóa đơn theo mã khách hàng;
+- Xác định khách hàng có tổng tiền mua hàng lớn nhất.
+
+b.3. Bài 2.3 Hãy xây dựng và chèn đơn nhập hàng vào các cấu trúc dữ liệu sau:
+ HashMap <Supplier, TreeMap<Purchase, ArrayList<PurchaseDetail>>>
+- Thực hành tìm kiếm các đơn nhập hàng theo mã nhà cung cấp;
+- Xác định nhà nhà cung cấp có tổng tiền hàng lớn nhất.
