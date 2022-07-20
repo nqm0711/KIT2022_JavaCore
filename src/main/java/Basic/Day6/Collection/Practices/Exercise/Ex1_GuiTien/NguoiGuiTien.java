@@ -77,6 +77,7 @@ public class NguoiGuiTien extends Object implements Comparable<NguoiGuiTien>{
 
     @Override
     public int compareTo(NguoiGuiTien obj) {
+        System.out.println(Ma.compareTo(obj.Ma));
         return Ma.compareTo(obj.Ma);
     }
 }

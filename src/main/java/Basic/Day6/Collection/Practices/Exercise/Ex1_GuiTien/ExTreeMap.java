@@ -17,7 +17,7 @@ public class ExTreeMap {
         customers.put(new NguoiGuiTien("HN03","Đỗ Ngọc Chung", "Hùng Vương, Ba Đình, Hà Nội" ,"0123444789" ,dateFormat.parse("1998-08-21")),105.5);
         customers.put(new NguoiGuiTien("HN04","Đào Đình Luyện", "Số 1 Đinh Tiên Hoàng, Hoàn Kiếm, Hà Nội" ,"01666666666" ,dateFormat.parse("1998-05-14")),990.5);
 
-        NguoiGuiTien cus1 = new NguoiGuiTien("HN05","Hoàng Minh Tuấn", "Số 1 Phạm Ngọc Thạch, Đống Đa, Hà Nội" ,"01696966969" ,dateFormat.parse("1998-01-11"));
+        NguoiGuiTien cus1 = new NguoiGuiTien("HN04","Hoàng Minh Tuấn", "Số 1 Phạm Ngọc Thạch, Đống Đa, Hà Nội" ,"01696966969" ,dateFormat.parse("1998-01-11"));
                 boolean kt = customers.containsKey(cus1);//
                 if (kt) {
                 System.out.println("Đã có trong danh sách");

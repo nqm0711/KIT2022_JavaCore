@@ -36,16 +36,16 @@ public class Bai2_1 {
         list1.add(orDetail3);
         list1.add(orDetail4);
         tm.put(or1, list);
-        tm.put(or2, list1); 
-        // convert map to stream
-        // Tìm hóa đơn có tổng số lượng lớn nhất
-        Stream<Map.Entry<Order, ArrayList<OrderDetail>>> str1=tm.entrySet().stream(); 
-        Optional<Map.Entry<Order, ArrayList<OrderDetail>>> 
-               tt= str1.max((x,y) -> new Integer(x.getValue().stream().mapToInt(x1->x1.getAmount()).sum())
-                       .compareTo(new Integer(y.getValue().stream().mapToInt(y1->y1.getAmount()).sum())));
-       
-        System.out.println(tt);
-        
+        tm.put(or2, list1);
+//         convert map to stream
+//         Tìm hóa đơn có tổng số lượng lớn nhất
+//        Stream<Map.Entry<Order, ArrayList<OrderDetail>>> str1=tm.entrySet().stream();
+//        Optional<Map.Entry<Order, ArrayList<OrderDetail>>>
+//               tt= str1.max((x,y) -> new Integer(x.getValue().stream().mapToInt(x1->x1.getAmount()).sum())
+//                       .compareTo(new Integer(y.getValue().stream().mapToInt(y1->y1.getAmount()).sum())));
+
+//        System.out.println(tt);
+
         //Tong Tien
         float max = 0;
         int idx = 0;
