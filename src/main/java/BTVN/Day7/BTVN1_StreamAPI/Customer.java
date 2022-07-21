@@ -1,5 +1,7 @@
 package BTVN.Day7.BTVN1_StreamAPI;
 
+import java.util.Objects;
+
 public class Customer {
     public String getName() {
         return name;
@@ -25,6 +27,17 @@ public class Customer {
         this.address = address;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(address, customer.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 
     @Override
     public String toString() {

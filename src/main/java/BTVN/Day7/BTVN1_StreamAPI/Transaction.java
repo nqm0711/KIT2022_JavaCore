@@ -1,5 +1,7 @@
 package BTVN.Day7.BTVN1_StreamAPI;
 
+import java.util.Objects;
+
 public class Transaction implements Comparable<Transaction> {
     private Customer trader;
     private Integer year;// Năm thực hiện giao dịch
@@ -50,6 +52,7 @@ public class Transaction implements Comparable<Transaction> {
     public void setAmount(Integer amount) {
         this.amount = amount;
     }
+
 
     @Override
     public int compareTo(Transaction o) {
