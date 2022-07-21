@@ -17,7 +17,7 @@ public class TangDanDaiNhat {
                 B=new int[1];
                 B[0]=A[i];
             }
-            if (max < soPhanTu) {max = soPhanTu;C = Arrays.copyOfRange(A,i-max,i);};
+            if (max < soPhanTu) {max = soPhanTu;C = Arrays.copyOfRange(A,i-max,i);}
         }
         System.out.println("Dãy dài nhất có " + max + " phần tử");
         System.out.println("Dãy dài nhất là" + Arrays.toString(C));
