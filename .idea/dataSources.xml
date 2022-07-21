@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Ch07_ConstructCo@DESKTOP-4JK9APK" uuid="8babed31-3529-45fb-a6c7-92f3566a4462">
+    <data-source source="LOCAL" name="@DESKTOP-4JK9APK" uuid="6a67e86c-7c03-41dc-b8ad-f1cb5d0d4a52">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://DESKTOP-4JK9APK\SQLEXPRESS;database=Ch07_ConstructCo</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="Ch07_SaleCo@DESKTOP-4JK9APK" uuid="3a63e8e4-95dc-48b0-9919-f1628406d3de">
-      <driver-ref>sqlserver.ms</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://DESKTOP-4JK9APK\SQLEXPRESS;database=Ch07_SaleCo</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://DESKTOP-4JK9APK\SQLEXPRESS;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
