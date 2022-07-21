@@ -14,7 +14,7 @@ public class InsertData {
 
     public static void main(String[] args) {
         String connectionUrl = "jdbc:sqlserver://localhost:1433;"
-                + "databaseName=sampleDB;user=sa;password=sa";
+                + "databaseName=sampleDB;user=sa;password=sa;encrypt=true;trustServerCertificate=true";
         // Declare the JDBC objects.     
         Connection conn = null;
         try {
