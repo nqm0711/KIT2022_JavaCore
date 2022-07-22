@@ -25,33 +25,33 @@ public class WorkWithDatabase {
             statement.setString(2, "FPT");
             statement.executeUpdate();
 
-            statement.setString(1, "VNPT");
-            statement.setString(2, "VNPT");
-            statement.executeUpdate();
-
-            statement.setString(1, "VIN");
-            statement.setString(2, "VIN");
-            statement.executeUpdate();
-
-            statement.setString(1, "SSB");
-            statement.setString(2, "SSB");
-            statement.executeUpdate();
-
-            statement.setString(1, "SHB");
-            statement.setString(2, "SHB");
-            statement.executeUpdate();
-
-            statement.setString(1, "EIB");
-            statement.setString(2, "EIB");
-            statement.executeUpdate();
-
-            statement.setString(1, "MSB");
-            statement.setString(2, "MSB");
-            statement.executeUpdate();
-
-            statement.setString(1, "OCB");
-            statement.setString(2, "OCB");
-            statement.executeUpdate();
+//            statement.setString(1, "VNPT");
+//            statement.setString(2, "VNPT");
+//            statement.executeUpdate();
+//
+//            statement.setString(1, "VIN");
+//            statement.setString(2, "VIN");
+//            statement.executeUpdate();
+//
+//            statement.setString(1, "SSB");
+//            statement.setString(2, "SSB");
+//            statement.executeUpdate();
+//
+//            statement.setString(1, "SHB");
+//            statement.setString(2, "SHB");
+//            statement.executeUpdate();
+//
+//            statement.setString(1, "EIB");
+//            statement.setString(2, "EIB");
+//            statement.executeUpdate();
+//
+//            statement.setString(1, "MSB");
+//            statement.setString(2, "MSB");
+//            statement.executeUpdate();
+//
+//            statement.setString(1, "OCB");
+//            statement.setString(2, "OCB");
+//            statement.executeUpdate();
 
         } catch (Exception ex) {
             ex.printStackTrace();
