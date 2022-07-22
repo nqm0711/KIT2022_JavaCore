@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class WorkWithDatabase {
-    public static void InsertStock(String[] args) {
+    public static void main(String[] args) {
         String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=StockExchange;" +
                 "user=sa;password=sa;encrypt=true;trustServerCertificate=true";
         // Declare the JDBC objects.
@@ -16,7 +16,8 @@ public class WorkWithDatabase {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");// buoc 1
             conn = DriverManager.getConnection(connectionUrl); // buoc 2
 
-            String sql = "INSERT INTO Stock ([Stock ID],[Stock Name])"
+
+            String sql = "INSERT INTO Stock (StockID, StockName)"
                     + " VALUES (?, ?)";
 
             PreparedStatement statement = conn.prepareStatement(sql);
