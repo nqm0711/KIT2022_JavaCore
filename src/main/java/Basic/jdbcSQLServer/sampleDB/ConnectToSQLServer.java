@@ -10,7 +10,7 @@ public class ConnectToSQLServer {
     public static void main(String[] args) {
       // Create a variable for the connection string.
       String connectionUrl = "jdbc:sqlserver://Localhost:1433;" +
-         "databaseName=Test;user=sa;password=sa";
+         "databaseName=Test;user=sa;password=sa;encrypt=true;trustServerCertificate=true";
       // Declare the JDBC objects.     
       Connection con = null;
       Statement stmt = null;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jdbcSQLServer.callable;
+package Basic.jdbcSQLServer.callable;
 
 import java.sql.*;
 
@@ -25,7 +25,7 @@ public class StoredProcedureCallOuputParameters {
     ;
     public static void main(String[] args) {
       String connectionUrl = "jdbc:sqlserver://Localhost:1433;"
-                + "databaseName=sampleDB;user=sa;password=sa";
+                + "databaseName=sampleDB;user=sa;password=sa;encrypt=true;trustServerCertificate=true";
         // Declare the JDBC objects.     
         Connection conn = null;
         Statement stmt = null;

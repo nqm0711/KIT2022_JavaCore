@@ -47,16 +47,33 @@ public class BTVN1_StreamAPI {
 
 //        Kiểm tra xem có khách hàng nào địa chỉ ở Hà Nội không ??
         System.out.println("Kiểm tra xem có khách hàng nào địa chỉ ở Hà Nội không ??");
-        System.out.print(lstCust.stream().anyMatch(cus -> cus.getAddress().equals("Ha Noi"))?"Yes":"No");
+        System.out.println(lstCust.stream().anyMatch(cus -> cus.getAddress().equals("Ha Noi"))?"Yes":"No");
 //        Xác định số lượng amount lớn nhất
         System.out.println("Xác định số lượng amount lớn nhất");
-        System.out.println(lstTrans.stream().map(tx -> tx.getAmount()).max(new Comparator<Integer>() {
+        Integer max = lstTrans.stream().map(Transaction::getAmount).max(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o1-02;
+                return o1-o2;
             }
-        }));
+        }).get();
+        System.out.println(max);
+//        Xác định tất cả giao dịch số lượng amount lớn nhất
+        System.out.println("Xác định tất cả giao dịch số lượng amount lớn nhất");
+        lstTrans.stream().filter(p->p.getAmount()==max).forEach(System.out::println);
 
 
+//       Tính và in ra tổng số lượng trong các giao dịch của các khách hàng ở một địa chỉ nào đó
+        System.out.println("Tính và in ra tổng số lượng trong các giao dịch của các khách hàng ở một địa chỉ nào đó");
+        int sum = lstTrans
+                .stream()
+                .filter(c -> c.getCustomer().getAddress().equals("Ha Noi"))
+                /*.mapToInt(tx->tx.getAmount()).sum();*/
+                .reduce(0, (subTotal, tran) ->subTotal + tran.getAmount(), Integer::sum);
+        System.out.println(sum);
+//       Xác định và in ra giao dịch có số lượng nhỏ nhất
+        System.out.println("Xác định và in ra giao dịch có số lượng nhỏ nhất");
+        Optional<Transaction> min = lstTrans.stream().min((t1, t2) -> t1.getAmount() - t2.getAmount());
+        Transaction slMin = min.get();
+        System.out.println(slMin);
     }
 }
