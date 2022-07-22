@@ -45,6 +45,17 @@ public class BTVN1_StreamAPI {
             }
         }).forEach(System.out::println);
 
+//        Kiểm tra xem có khách hàng nào địa chỉ ở Hà Nội không ??
+        System.out.println("Kiểm tra xem có khách hàng nào địa chỉ ở Hà Nội không ??");
+        System.out.print(lstCust.stream().anyMatch(cus -> cus.getAddress().equals("Ha Noi"))?"Yes":"No");
+//        Xác định số lượng amount lớn nhất
+        System.out.println("Xác định số lượng amount lớn nhất");
+        System.out.println(lstTrans.stream().map(tx -> tx.getAmount()).max(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1-02;
+            }
+        }));
 
 
     }
