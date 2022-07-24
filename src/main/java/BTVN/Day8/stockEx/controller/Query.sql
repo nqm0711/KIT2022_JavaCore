@@ -121,3 +121,23 @@ as
         group by idStock
         having (sum(price*amount)=@max)
     end
+
+    --Lấy ra danh sách những người mua nhiều cố phiếu nhất của từng mã cổ phiếu
+
+    create procedure MaxAmountBoughtByIDStock
+    as
+    begin
+        select idBuyer,TraderName, idStock, sT3.maxTotal
+        from (select sT1.idStock, max(sT1.TotalAmountBought) maxTotal
+              from (select idBuyer, idStock, sum(amount) TotalAmountBought
+                    from TransactionTable
+                    group by idBuyer, idStock) sT1
+              group by sT1.idStock) sT3
+                 inner join
+             (select idBuyer, max(TotalAmountBought) maxTotal
+              from (select idBuyer, idStock, sum(amount) TotalAmountBought
+                    from TransactionTable
+                    group by idBuyer, idStock) sT2
+              group by idBuyer) st4 on sT3.maxTotal = sT4.maxTotal
+                 inner join TraderTable T on sT4.idBuyer = T.sIDTrader
+    end
