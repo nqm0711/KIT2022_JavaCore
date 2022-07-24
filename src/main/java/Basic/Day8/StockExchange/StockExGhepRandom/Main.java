@@ -71,7 +71,7 @@ public class Main {
 //            System.out.println("sell size: " + sQ_FPT.size());
                 Order buyOrder = bQ.peek();
                 Order sellOrder = sQ.peek();
-                if(buyOrder.getPrice() >= sellOrder.getPrice() && Objects.equals(buyOrder.getsIDStock(), sellOrder.getsIDStock())) {
+                if(buyOrder.getPrice() >= sellOrder.getPrice()) {
                     int txAmount = buyOrder.getAmount()> sellOrder.getAmount() ? sellOrder.getAmount() : buyOrder.getAmount();
                     transactionList.add(new Transaction("tx00"+j,buyOrder.getOrderDate(),buyOrder.getsIDStock(),sellOrder.getOrderID(),sellOrder.getsIDtrader(),buyOrder.getOrderID(),buyOrder.getsIDtrader(),txAmount, sellOrder.getPrice()));
                     if (buyOrder.getAmount()> sellOrder.getAmount()) {

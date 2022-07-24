@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Basic.Day8.StockExchange.CuaThay;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue; 
+import java.util.*;
+
 class PriceDesc implements Comparator<Order> { 
     @Override
     public int compare(Order o1, Order o2) {
@@ -61,7 +53,7 @@ public class Main {
         while(!bQ.isEmpty() && !sQ.isEmpty()) { 
             Order buyOrder = bQ.peek();
             Order sellOrder = sQ.peek();
-            if(buyOrder.getPrice() >= sellOrder.getPrice()) {
+            if(buyOrder.getPrice() >= sellOrder.getPrice()&& Objects.equals(buyOrder.getsIDStock(), sellOrder.getsIDStock())) {
                 Transaction transantion = new Transaction();
                 transantion.idStock = buyOrder.getsIDStock();
                 transantion.idBuyer = buyOrder.getsIDTrader();
