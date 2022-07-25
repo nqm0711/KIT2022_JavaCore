@@ -22,7 +22,7 @@ class PriceAsc implements Comparator<Order> {
 
 public class Main {
     static String connectionUrl = "jdbc:sqlserver://Localhost:1433;"
-            + "databaseName=sampleDB;user=sa;password=sa";
+            + "databaseName=StockExchange;user=sa;password=sa";
     // Declare the JDBC objects.
     static Connection conn = null;
 
